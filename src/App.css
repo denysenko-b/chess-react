@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.chessboard--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    flex-grow: 1;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.chessboard--container h2 {
+    margin-bottom: 1rem;
+}
+
+.chessboard {
+    width: calc(64px * 8);
+    height: calc(64px * 8);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.square {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square--dark {
+    background-color: #b58863;
+}
+
+.square--light {
+    background-color: #f0d9b5;
+}
+
+.piece {
+    max-width: 80%;
+    max-height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece--available {
+    border: 4px solid #0f0;
+    border-radius: 10px;
+}
+
+.piece--selected {
+    border: 4px solid #ff0;
+}
+
+.square--under_attack {
+    background-color: red;
+}
+
+.piece img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+.lost-pieces {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2rem;
+    color: #333;
+    background-color: #f0d9b5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loser-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.loser-message__text {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    font-size: 2rem;
+    color: #fff;
+    background-color: #f00;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #d00;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    background-color: #333;
+    padding: 1rem;
+
+    flex-shrink: 0;
+}
+
+.timer button {
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timer button:hover {
+    background-color: rgb(225, 224, 224);
+}
