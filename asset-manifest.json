@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/chess-react/static/css/main.1084896f.css",
-    "main.js": "/chess-react/static/js/main.6e232092.js",
+    "main.css": "/chess-react/static/css/main.b36ca53d.css",
+    "main.js": "/chess-react/static/js/main.f96671cc.js",
+    "static/media/rook.svg": "/chess-react/static/media/rook.315a2ade75b5cc90fce595f2b2e1c9f8.svg",
+    "static/media/king.svg": "/chess-react/static/media/king.0234ef129124e9ee9a0e9d9d265b59d7.svg",
+    "static/media/bishop.svg": "/chess-react/static/media/bishop.0cc1861fadba9c120d4eebcfbe974386.svg",
+    "static/media/pawn.svg": "/chess-react/static/media/pawn.0cc1861fadba9c120d4eebcfbe974386.svg",
+    "static/media/knight.svg": "/chess-react/static/media/knight.3c1167b0a23065efc6a54a89cb844990.svg",
     "index.html": "/chess-react/index.html",
-    "main.1084896f.css.map": "/chess-react/static/css/main.1084896f.css.map",
-    "main.6e232092.js.map": "/chess-react/static/js/main.6e232092.js.map"
+    "main.b36ca53d.css.map": "/chess-react/static/css/main.b36ca53d.css.map",
+    "main.f96671cc.js.map": "/chess-react/static/js/main.f96671cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1084896f.css",
-    "static/js/main.6e232092.js"
+    "static/css/main.b36ca53d.css",
+    "static/js/main.f96671cc.js"
   ]
 }
