@@ -2,16 +2,14 @@ import { Cell } from "./../Cell";
 import { Colors } from "./../Colors";
 import { Figure, FigureNames } from "./Figure";
 
-import blackLogo from "../../assets/black-king.png";
-import whiteLogo from "../../assets/white-king.png";
+import logo from "../../assets/king.svg";
 
 export class King extends Figure {
-
     isBeenUnderAttack: boolean = false;
 
     constructor(color: Colors, cell: Cell) {
         super(color, cell);
-        this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
+        this.logo = logo;
         this.name = FigureNames.KING;
     }
     canMove(target: Cell): boolean {

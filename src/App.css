@@ -1,3 +1,8 @@
+:root {
+    --black: #b58863;
+    --white: #f0d9b5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -53,20 +58,29 @@
 }
 
 .square--dark {
-    background-color: #b58863;
+    background-color: var(--black);
 }
 
 .square--light {
-    background-color: #f0d9b5;
+    background-color: var(--white);
 }
 
 .piece {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.piece img {
+    width: 80%;
+    position: relative;
+}
+
+.piece--black img {
+    filter: invert(1);
 }
 
 .piece--available {
@@ -80,12 +94,6 @@
 
 .square--under_attack {
     background-color: red;
-}
-
-.piece img {
-    width: 48px;
-    height: 48px;
-    position: relative;
 }
 
 .lost-pieces {

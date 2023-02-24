@@ -1,11 +1,7 @@
-import React, {FC, useState, useEffect} from 'react';
+import React, { FC, useState, useEffect } from "react";
 
-interface ChangeFigureProps {
-
-}
+interface ChangeFigureProps {}
 
 const ChangeFigureComponent: FC<ChangeFigureProps> = ({}) => {
-    return(
-        <div className="changeFigure"></div>
-    )
-}
+    return <div className="changeFigure"></div>;
+};

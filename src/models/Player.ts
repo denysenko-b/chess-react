@@ -1,5 +1,5 @@
-import { Colors } from './Colors';
-import { King } from './figures/King';
+import { Colors } from "./Colors";
+import { King } from "./figures/King";
 export class Player {
     color: Colors;
     kingIsUnderAttack: boolean = false;

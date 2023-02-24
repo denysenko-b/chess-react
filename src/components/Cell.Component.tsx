@@ -39,13 +39,6 @@ const CellComponent: FC<CellProps> = ({
             >
                 {cell.figure?.logo && <img src={cell.figure?.logo} />}
             </div>
-            {/* {cell.avaliable && !cell.figure && (
-                <div className="avaliable"></div>
-            )} */}
-            {/* {cell.figure?.logo && <img className={[
-                'piece',
-                cell.color === Colors.BLACK ? 'peice--black' : 'square--white'
-            ].join(' ')} src={cell.figure.logo} />} */}
         </div>
     );
 };

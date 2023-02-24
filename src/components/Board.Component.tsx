@@ -16,7 +16,7 @@ const BoardComponent: FC<BoardProps> = ({
     board,
     setBoard,
     currentPlayer,
-    swapPlayer
+    swapPlayer,
 }) => {
     const [selectedCell, setSelectedCell] = useState<Cell | null>(null);
 

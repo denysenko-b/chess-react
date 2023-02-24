@@ -1,4 +1,4 @@
-import { Figure, FigureNames } from './figures/Figure';
+import { Figure, FigureNames } from "./figures/Figure";
 import { Knight } from "./figures/Knight";
 import { Rook } from "./figures/Rook";
 import { Pawn } from "./figures/Pawn";
@@ -7,7 +7,7 @@ import { Queen } from "./figures/Queen";
 import { Colors } from "./Colors";
 import { Cell } from "./Cell";
 import { Bishop } from "./figures/Bishop";
-import { Player } from './Player';
+import { Player } from "./Player";
 export class Board {
     cells: Cell[][] = [];
     lostBlackFigures: Figure[] = [];
@@ -49,7 +49,7 @@ export class Board {
         }
     }
 
-    public getCell(x: number, y: number) : Cell {
+    public getCell(x: number, y: number): Cell {
         return this.cells[y][x];
     }
 
@@ -71,18 +71,24 @@ export class Board {
         return newBoard;
     }
 
-    public checkKingIsUnderAttack(player: Player | null) : boolean {
+    public checkKingIsUnderAttack(player: Player | null): boolean {
         const kingCell = this.getKingCell(player);
 
-        return !!kingCell?.figure && kingCell?.isUnderAttack(kingCell, kingCell.figure?.color);
+        return (
+            !!kingCell?.figure &&
+            kingCell?.isUnderAttack(kingCell, kingCell.figure?.color)
+        );
     }
 
-    private getKingCell(player: Player | null) : Cell | null {
+    private getKingCell(player: Player | null): Cell | null {
         for (let i = 0; i < this.cells.length; i++) {
             const row = this.cells[i];
             for (let j = 0; j < row.length; j++) {
                 const target = row[j];
-                if (target?.figure?.name === FigureNames.KING && target?.figure?.color === player?.color) {
+                if (
+                    target?.figure?.name === FigureNames.KING &&
+                    target?.figure?.color === player?.color
+                ) {
                     return target;
                 }
             }

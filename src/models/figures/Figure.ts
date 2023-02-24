@@ -1,15 +1,15 @@
-import { Colors } from './../Colors';
-import logo from "../../assets/white-rook.png";
-import { Cell } from '../Cell';
+import { Colors } from "./../Colors";
+import logo from "../../assets/rook.svg";
+import { Cell } from "../Cell";
 
 export enum FigureNames {
     FIGURE = "",
-    KING = 'king',
-    KNIGHT = 'knight',
-    PAWN = 'pawn',
-    QUEEN = 'queen',
+    KING = "king",
+    KNIGHT = "knight",
+    PAWN = "pawn",
+    QUEEN = "queen",
     ROOK = "rook",
-    BISHOP = "bishop"
+    BISHOP = "bishop",
 }
 
 export class Figure {
@@ -28,7 +28,7 @@ export class Figure {
         this.id = Math.random();
     }
 
-    canMove(target: Cell) : boolean {
+    canMove(target: Cell): boolean {
         if (target.figure?.color === this.color) {
             return false;
         }

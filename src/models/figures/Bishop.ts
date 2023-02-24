@@ -2,13 +2,12 @@ import { Cell } from "./../Cell";
 import { Colors } from "./../Colors";
 import { Figure, FigureNames } from "./Figure";
 
-import blackLogo from "../../assets/black-bishop.png";
-import whiteLogo from "../../assets/white-bishop.png";
+import logo from "../../assets/bishop.svg";
 
 export class Bishop extends Figure {
     constructor(color: Colors, cell: Cell) {
         super(color, cell);
-        this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
+        this.logo = logo;
         this.name = FigureNames.BISHOP;
     }
     canMove(target: Cell): boolean {
